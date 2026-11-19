@@ -16,7 +16,7 @@ The Google Sheet is [here](https://docs.google.com/spreadsheets/d/1_6E97ad-AL769
 In PowerShell from the repository root:
 
 ```powershell
-cd 'my workflow'
+cd my_workflow
 python tool_call.py 'Draft a LinkedIn connection request for Neel Verma.'
 python tool_call.py 'Who works at PaperKite Learning?'
 ```
@@ -25,7 +25,7 @@ This uses the `GROQ_API_KEY` in the existing `.env` file in the repository root;
 
 ## Try the MCP server
 
-Start this from `my workflow` and leave it running:
+Start this from `my_workflow` and leave it running:
 
 ```powershell
 python mcp_server.py
@@ -67,7 +67,7 @@ Observed with Groq on 19 November 2026; model tool choices may vary on later run
 
 ## Deploy on FastMCP Gateway
 
-Commit and push this folder to GitHub first. Create a server using your fork and the entrypoint `my workflow/mcp_server.py:mcp`. If the Gateway cannot resolve a path with a space, rename the folder to `my_workflow` and use `my_workflow/mcp_server.py:mcp`. A deployed server using the default local snapshot needs no Groq API key; Groq is used only by `tool_call.py`.
+Commit and push this folder to GitHub first. Create a server using your fork and the entrypoint `my_workflow/mcp_server.py:mcp`. A deployed server using the default local snapshot needs no Groq API key; Groq is used only by `tool_call.py`.
 
 Your current FastMCP plan requires authentication. Redeploying does not turn it off. Test the new server with its URL and sign in when prompted.
 
